@@ -6,7 +6,7 @@ class CreateDresses < ActiveRecord::Migration[6.0]
       t.string :size
       t.integer :price
       t.string :description
-      t.boolean :availibilty
+      t.boolean :available
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
