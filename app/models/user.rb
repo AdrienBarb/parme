@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
-  validates :zip_code, presence: true
+  validates :zip_code, presence: true, format: { with: /[0-9]{5}/ }
   validates :city, presence: true
-  validates :phone_number, presence: true, uniqueness: true
+  validates :phone_number, presence: true, uniqueness: true, format: { with: /\A0(6|7)\s([0-9]{2}\s){3}([0-9]{2})$/ }
 end

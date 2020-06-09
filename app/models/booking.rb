@@ -2,8 +2,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :dress
 
-  validates :start_rent_at, presence: true, availability: true
-  validates :end_rent_at, presence: true, availability: true
+  validates :start_rent_at, presence: true
+  validates :end_rent_at, presence: true
   validate :end_date_after_start_date
 
   private
