@@ -23,6 +23,10 @@ class DressesController < ApplicationController
     end
   end
 
+  def article_params      #didier
+  params.require(:dress).permit(:title, :body, :photo) #didier
+end #didier
+
   private
 
   def dress_params
