@@ -7,6 +7,5 @@ class Dress < ApplicationRecord
   validates :color, presence: true
   validates :size, presence: true, inclusion: { in: %w(XS S M L) }
   validates :price, presence: true
-  validates :available, presence: true
 
 end
