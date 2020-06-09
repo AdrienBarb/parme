@@ -1,9 +1,10 @@
-<%= @dresses.each do |dress| %>
+<% @dresses.each do |dress| %>
   <ul>
     <li><%= dress.brand %></li>
     <li><%= dress.color %></li>
     <li><%= dress.size %></li>
     <li><%= dress.price %></li>
     <li><%= dress.description %></li>
+    <li><%= link_to 'Open', dress_path(dress) %></li>
   </ul>
 <% end %>
