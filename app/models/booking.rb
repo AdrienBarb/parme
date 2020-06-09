@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :user
-  belongs_to :dress
+  belongs_to :dress, dependent: :destroy
 
   validates :start_rent_at, presence: true
   validates :end_rent_at, presence: true
