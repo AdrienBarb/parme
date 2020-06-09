@@ -8,4 +8,10 @@ class DressesController < ApplicationController
     @dress = Dress.find(params[:id])
   end
 
+  def new
+  end
+
+  def create
+  end
+
 end
