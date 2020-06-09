@@ -1,7 +1,9 @@
-<% @dresses.each do  %>
-  <%= dress.brand %>
-  <%= dress.color %>
-  <%= dress.size %>
-  <%= dress.price %>
-  <%= dress.description %>
+<%= @dresses.each do |dress| %>
+  <ul>
+    <li><%= dress.brand %></li>
+    <li><%= dress.color %></li>
+    <li><%= dress.size %></li>
+    <li><%= dress.price %></li>
+    <li><%= dress.description %></li>
+  </ul>
 <% end %>
