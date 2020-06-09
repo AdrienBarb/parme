@@ -10,9 +10,17 @@ puts "ending user creation"
 
 puts "starting dress creation"
 dress1 = Dress.create(brand: "Chanel", color: "Red", size: "XS", price: 150, description: "Style une épaule dénudée avec léger rembourrage et manche resserrée", user: user1)
+file1 = URI.open('https://res.cloudinary.com/dklrntmo9/image/upload/v1591714385/vh24wvymgup3valbrfco.jpg')
+dress1.photo.attach(io: file1, filename: 'dress1.jpg', content_type: 'image/jpg' )
 dress2 = Dress.create(brand: "Dior", color: "White", size: "S", price: 230, description: "Tissu dentelle froncée et bonnets à armatures rembourrés", user: user1)
+file2 = URI.open('https://res.cloudinary.com/dklrntmo9/image/upload/v1591714413/gux6yodrlg4r09myxh6t.jpg')
+dress2.photo.attach(io: file2, filename: 'dress2.jpg', content_type: 'image/jpg' )
 dress3 = Dress.create(brand: "Burberry", color: "Black", size: "M", price: 90, description: "Corsage avec armatures, Fermé par glissière dissimulée au dos", user: user1)
+file3 = URI.open('https://res.cloudinary.com/dklrntmo9/image/upload/v1591714406/ofefegogpcnpqrljqbns.jpg')
+dress3.photo.attach(io: file3, filename: 'dress3.jpg', content_type: 'image/jpg' )
 dress4 = Dress.create(brand: "Prada", color: "Parme", size: "M", price: 110, description: "Entièrement doublé", user: user2)
+file4 = URI.open('https://res.cloudinary.com/dklrntmo9/image/upload/v1591714406/ofefegogpcnpqrljqbns.jpg')
+dress4.photo.attach(io: file4, filename: 'dress4.jpg', content_type: 'image/jpg' )
 puts "ending dress creation"
 
 puts "starting review creation"

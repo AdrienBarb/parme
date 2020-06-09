@@ -5,7 +5,9 @@
     <li><%= dress.size %></li>
     <li><%= dress.price %></li>
     <li><%= dress.description %></li>
-    <li><%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %></li>   <!-- didier -->
+    <% if dress.photo.attached? %>
+      <li><%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %></li>   <!-- didier -->
+    <% end %>
     <li><%= link_to 'Open', dress_path(dress) %></li>
   </ul>
 <% end %>
