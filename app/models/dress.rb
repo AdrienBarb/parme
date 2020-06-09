@@ -1,7 +1,7 @@
 class Dress < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  has_many :reviews
-  has_many :bookings
+  belongs_to :user
+  has_many :reviews, dependent: :destroy
+  has_many :bookings, dependent: :destroy
 
   validates :brand, presence: true
   validates :color, presence: true
