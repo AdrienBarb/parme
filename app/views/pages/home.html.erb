@@ -1,6 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<p>PARME</p>
+<h1>Trouvez la robe de vos rêves</h1>
 
-
-
-<%= link_to 'se connecter', new_user_registration_path %>
+<%= form_tag(dresses_path, method: "get") do %>
+  <%= text_field_tag(:city) %>
+  <%= submit_tag("a") %>
+<% end %>
