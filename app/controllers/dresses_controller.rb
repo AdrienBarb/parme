@@ -9,9 +9,18 @@ class DressesController < ApplicationController
   end
 
   def new
+    @dress = Dress.new
   end
 
   def create
+    @dress = Dress.new(dress_params)
+    @dress.user = current_user
+    @dress.save
   end
 
+  private
+
+  def dress_params
+    params.require(:dress).permit(:brand, :color, :size, :description, :price, :photo)
+  end
 end
