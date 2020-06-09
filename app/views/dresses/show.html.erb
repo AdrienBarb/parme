@@ -1,5 +1,16 @@
-<h1>coucou</h1>
 
-<%= link_to 'Laisser une review', new_dress_review_path(@dress) %>
+<h3><%= @dress.brand %></h3>
+<p><%= @dress.color %></p>
+<p><%= @dress.size %></p>
+<p><%= @dress.price %></p>
+<p><%= @dress.description %></p>
+<%= cl_image_tag @dress.photo.key, height: 300, width: 400, crop: :fill %>
+
+<p><%= link_to 'Laisser une review', new_dress_review_path(@dress) %></p>
 
 
+<% @dress.reviews.each do |f| %>
+<ul>
+  <li><%= f.description %> <%= f.rating %></li>
+</ul>
+<% end %>
