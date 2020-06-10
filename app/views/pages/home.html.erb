@@ -1,6 +1,8 @@
-<h1>Trouvez la robe de vos rêves</h1>
+<div class="banner">
+  <h1>Trouvez la robe de vos rêves</h1>
 
-<%= form_tag(dresses_path, method: "get") do %>
-  <%= text_field_tag(:city) %>
-  <%= submit_tag() %>
-<% end %>
+  <%= form_tag(dresses_path, method: "get") do %>
+    <%= text_field_tag(:city) %>
+    <%= submit_tag() %>
+  <% end %>
+</div>
