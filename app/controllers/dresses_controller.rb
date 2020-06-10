@@ -27,6 +27,12 @@ class DressesController < ApplicationController
     end
   end
 
+  def destroy
+    @dress = Dress.find(id: params[:id])
+    @dress.destroy
+    redirect_to root_path
+  end
+
   private
 
   def dress_params
