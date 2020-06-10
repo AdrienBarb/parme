@@ -1,11 +1,13 @@
 class DressesController < ApplicationController
+skip_before_action :authenticate_user!, only: [:index]
+
   def index
     dresses = Dress.joins(:user).where(users: { city: params[:city].capitalize })
     dresses = dresses.where(brand: params[:brand].capitalize) if params[:brand].present?
     dresses = dresses.where(color: params[:color].capitalize) if params[:color].present?
     dresses = dresses.where(size: params[:size].capitalize) if params[:size].present?
 
-    @dresses = dresses.select { |dress| dress.available }
+    @dresses = dresses.select{ |dress| dress.available }
   end
 
   def show

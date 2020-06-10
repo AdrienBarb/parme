@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   def new
     @dress = Dress.find(params[:dress_id])
     @booking = Booking.new
@@ -15,9 +14,7 @@ class BookingsController < ApplicationController
     else
       render :new
     end
-
   end
-
 
 private
 

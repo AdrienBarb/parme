@@ -5,11 +5,11 @@ class DressPolicy < ApplicationPolicy
     end
   end
 
-  def create?
+  def index?
     true
   end
 
-  def index?
+  def create?
     true
   end
 
