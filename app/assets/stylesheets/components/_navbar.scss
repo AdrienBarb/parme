@@ -5,6 +5,10 @@
     justify-content: space-between;
     padding: 1rem 3rem;
     color: black;
+
+    a{
+      color: black;
+    }
 }
 
 .navbar-lewagon {
@@ -16,12 +20,15 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
 
 #navbarDropdown {
   border: none;
   background-color: transparent;
   margin: 0;
 }
+
+.flex {
+  display: flex;
+}
+
+
