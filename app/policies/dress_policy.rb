@@ -5,9 +5,6 @@ class DressPolicy < ApplicationPolicy
     end
   end
 
-  def index?
-    true
-  end
 
   def create?
     true
