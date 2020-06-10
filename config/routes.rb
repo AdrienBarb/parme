@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create]
   end
 
-  get "pages/about"
+  get "pages/about", to:'pages#about'
 
 
 end
