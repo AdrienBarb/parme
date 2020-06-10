@@ -1,0 +1,18 @@
+.banner {
+  background-image: image-url("banner.png");
+  background: cover;
+  height: 100vh;
+  position: relative;
+
+  h1{
+    font-size: 80px;
+    color: #4A020B;
+    width: 600px;
+  }
+}
+
+.content {
+  position: absolute;
+  right: 8rem;
+  top: 16rem;
+}
