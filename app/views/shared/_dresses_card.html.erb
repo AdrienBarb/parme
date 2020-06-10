@@ -1,0 +1,17 @@
+
+
+<div>
+  <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
+  <div>
+    <div>
+      <h2><%= dress.brand %></h2>
+      <p><%= dress.description %></p>
+    </div>
+    <div>
+      <p><%= dress.color %></p>
+      <p><%= dress.size %></p>
+    </div>
+    <p><%= dress.price %></p>
+    <p>4,5★</p>
+  </div>
+</div>
