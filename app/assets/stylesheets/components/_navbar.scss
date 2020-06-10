@@ -7,23 +7,21 @@
     color: black;
 }
 
-.title {
-  width: 60%;
-  display: flex;
-  align-items: center;
-
-  p{
-    margin: 0;
-  }
+.navbar-lewagon {
+  justify-content: space-between;
+  background: #ECD4CC;
 }
 
-.menu{
-  display: flex;
-  width: 40%;
-  justify-content: space-between;
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+#navbarDropdown {
+  border: none;
+  background-color: transparent;
+  margin: 0;
 }
