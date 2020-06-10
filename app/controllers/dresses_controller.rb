@@ -10,14 +10,17 @@ class DressesController < ApplicationController
 
   def show
     @dress = Dress.find(params[:id])
+    authorize @dress
   end
 
   def new
     @dress = Dress.new
+    authorize @dress
   end
 
   def create
     @dress = Dress.new(dress_params)
+    authorize @dress
     @dress.user = current_user
 
     if @dress.save!
@@ -28,7 +31,8 @@ class DressesController < ApplicationController
   end
 
   def destroy
-    @dress = Dress.find(id: params[:id])
+    @dress = Dress.find(params[:id])
+    authorize @dress
     @dress.destroy
     redirect_to root_path
   end
