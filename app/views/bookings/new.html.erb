@@ -1,0 +1,5 @@
+<%= simple_form_for [@dress, @booking] do |f| %>
+  <%= f.input :start_rent_at, as: :date %>
+  <%= f.input :end_rent_at, as: :date %>
+  <%= f.submit "Confirme booking", class: "btn btn-primary" %>
+<% end %>

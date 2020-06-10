@@ -16,12 +16,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-    #   @cocktail = Cocktail.find(params[:cocktail_id])
-    # @dose = Dose.new(doses_params)
-    # @dose.cocktail = @cocktail
-    # if @dose.save
-    #   redirect_to cocktail_path(@cocktail)
-
   private
 
   def reviews_params
