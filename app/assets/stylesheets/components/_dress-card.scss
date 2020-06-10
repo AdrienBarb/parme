@@ -1,11 +1,37 @@
-.card.container{
+.card-container{
   display: flex;
+  max-width: 900px;
+  padding: 1rem;
+  color: black;
+
+  img {
+    width: 200px;
+    height: 200px;
+    margin-right: 2rem;
+
+  }
 }
 
 .top {
   display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
 }
 
 .down {
   display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
 }
