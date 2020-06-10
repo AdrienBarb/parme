@@ -1,5 +1,8 @@
 
-<%= link_to 'SUPPRIMER', dress_path(@dress), method: :delete, data: { confirm: 'Are you sure to delete this dress' } %>
+
+<% if policy(@dress).destroy? %>
+  <%= link_to 'SUPPRIMER', dress_path(@dress), method: :delete, data: { confirm: 'Are you sure to delete this dress' } %>
+<% end %>
 
 <h3><%= @dress.brand %></h3>
 <p><%= @dress.color %></p>
@@ -8,7 +11,10 @@
 <p><%= @dress.description %></p>
 <%= cl_image_tag @dress.photo.key, height: 300, width: 400, crop: :fill %>
 
-<p><%= link_to 'Laisser une review', new_dress_review_path(@dress) %></p>
+
+<% if policy(Review).new? %>
+  <p><%= link_to 'Laisser une review', new_dress_review_path(@dress) %></p>
+<% end %>
 
 
 <% @dress.reviews.each do |f| %>
@@ -19,20 +25,12 @@
 
 
 
-
-<p><%= link_to 'Booker cette robe', new_dress_booking_path(@dress) %></p>
-
-
-
-
-
-
-
-
-
-
+<% if policy(@dress).can_book? %>
+  <p><%= link_to 'Booker cette robe', new_dress_booking_path(@dress) %></p>
+<% end %>
 
 <!-- <form action="">
   <input type="text" name="date" class="flatpickr">
 </form>
  -->
+

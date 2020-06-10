@@ -21,5 +21,8 @@ class DressPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def can_book?
+    record.user != user
+  end
 
 end
