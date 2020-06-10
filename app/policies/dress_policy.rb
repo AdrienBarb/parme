@@ -5,7 +5,6 @@ class DressPolicy < ApplicationPolicy
     end
   end
 
-
   def create?
     true
   end
@@ -18,8 +17,7 @@ class DressPolicy < ApplicationPolicy
     record.user == user
   end
 
-  def can_book?
-    record.user != user
+  def belong_to_user?
+    record.user == user
   end
-
 end
