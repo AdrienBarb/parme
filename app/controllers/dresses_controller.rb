@@ -1,7 +1,11 @@
 class DressesController < ApplicationController
   def index
-    all_dresses = Dress.joins(:user).where(users: { city: params[:city] })
-    @dresses = all_dresses.select{ |dress| dress.available }
+    dresses = Dress.joins(:user).where(users: { city: params[:city].capitalize })
+    dresses = dresses.where(brand: params[:brand].capitalize) if params[:brand].present?
+    dresses = dresses.where(color: params[:color].capitalize) if params[:color].present?
+    dresses = dresses.where(size: params[:size].capitalize) if params[:size].present?
+
+    @dresses = dresses.select { |dress| dress.available }
   end
 
   def show
@@ -22,10 +26,6 @@ class DressesController < ApplicationController
       render :new
     end
   end
-
-  def article_params      #didier
-  params.require(:dress).permit(:title, :body, :photo) #didier
-end #didier
 
   private
 

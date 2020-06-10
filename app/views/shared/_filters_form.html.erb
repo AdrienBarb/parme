@@ -1,0 +1,10 @@
+
+<%= options_for_select([['Lisbon', 1], ['Madrid', 2]]) %>
+
+<%= form_tag(dresses_path, method: "get") do %>
+  <%= text_field_tag(:brand, nil, placeholder: 'choose a brand') %>
+  <%= text_field_tag(:color, nil, placeholder: 'choose a color') %>
+  <%= text_field_tag(:size, nil, placeholder: 'choose a size') %>
+  <%= hidden_field_tag(:city, "#{params[:city]}") %>
+  <%= submit_tag('FILTER') %>
+<% end %>

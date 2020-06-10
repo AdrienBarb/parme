@@ -1,13 +1,7 @@
+<h1>Les robes disponibles à <%= @dresses.first.user.city %></h1>
+
+<%= render "shared/filters_form" %>
+
 <% @dresses.each do |dress| %>
-  <ul>
-    <li><%= dress.brand %></li>
-    <li><%= dress.color %></li>
-    <li><%= dress.size %></li>
-    <li><%= dress.price %></li>
-    <li><%= dress.description %></li>
-    <% if dress.photo.attached? %>
-      <li><%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %></li>   <!-- didier -->
-    <% end %>
-    <li><%= link_to 'Open', dress_path(dress) %></li>
-  </ul>
+  <%= render partial: "shared/dresses_card", locals: {dress: dress} %>
 <% end %>
