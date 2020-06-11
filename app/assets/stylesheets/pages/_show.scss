@@ -1,0 +1,43 @@
+.show-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  display: flex;
+  font-family: comfortaa;
+
+  h3{
+    font-family: oranienbaum;
+  }
+}
+
+.dress-info{
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.dress-info-info {
+  margin-left: 4rem;
+}
+
+.title-show {
+  margin-bottom: 1.5rem;
+}
+
+.dress-info-title > p {
+  font-weight: bold;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+}
+
+.dress-button-container {
+  display: flex;
+}
+
+.button-dress{
+    background-color: #ecd4cc;
+    padding: 9px 2rem;
+    color: white;
+    font-family: oranienbaum;
+    font-size: 14px;
+}
