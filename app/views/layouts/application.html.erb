@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Parme</title>
+    <% title = yield(:title).to_s.empty? ? 'parme' : yield(:title) %>
+    <title><%= title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,7 +19,7 @@
 
   <body>
 
-    <%= render 'shared/nav-bar' %>
+    <%= render 'shared/nav-bar' unless content_for?(:hide_navbar) %>
 
     <%= yield %>
   </body>
