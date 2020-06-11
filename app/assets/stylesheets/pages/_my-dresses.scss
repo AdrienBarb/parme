@@ -1,0 +1,35 @@
+.my-dresses-container{
+  max-width: 900px;
+  margin: 3rem auto;
+
+  h1{
+    font-family: 'Oranienbaum', serif;
+    color: #4A020B;
+    margin-bottom: 2rem;
+  }
+}
+
+.card-container{
+  width: 940px;
+}
+
+.my-dresses-button{
+  padding: 0.5rem 2rem;
+  background-color: #ecd4cc;
+  border: none;
+  margin-bottom: 1rem;
+  width: 200px;
+}
+
+.my-dresses-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-arround;
+}
+
+.card-container > .my-dresses-button > button > a {
+    color: white !important;
+}
+
+
+
