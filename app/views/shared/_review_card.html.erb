@@ -1,9 +1,15 @@
 
-<div>
-  <h3><%= review.dress.user.first_name.capitalize %> <%= review.dress.user.last_name.capitalize %></h3>
-  <p> <%= review.created_at.strftime('%d/%m/%Y') %></p>
-  <% review.rating.floor.times do %>
-    ★
-  <% end %>
-  <p> <%= review.description %></p>
+<div class="card-review">
+  <div class="name-stars">
+      <h3><%= review.dress.user.first_name.capitalize %> <%= review.dress.user.last_name.capitalize %></h3>
+      <% review.rating.floor.times do %>
+        ★
+      <% end %>
+  </div>
+  <div class="date">
+      <p> <%= review.created_at.strftime('%d/%m/%Y') %></p>
+  </div>
+  <div class="review-description">
+    <p> "<%= review.description %>"</p>
+  </div>
 </div>
