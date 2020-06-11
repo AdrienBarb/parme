@@ -10,10 +10,29 @@
     width: 600px;
     font-family: 'Oranienbaum', serif;
   }
+
+  .search-bar {
+    background-color: white;
+    width: 60%;
+    height: 35px;
+    font-size: 14px;
+    padding-left: 10px;
+    font-family: 'Comfortaa', sans-serif;
+  }
 }
 
 .content {
   position: absolute;
   right: 8rem;
   top: 16rem;
+}
+
+.loupe {
+  color: #ECD4CC;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 246px;
+  top: 162px;
 }
