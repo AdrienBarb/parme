@@ -1,10 +1,14 @@
 .card-container{
   display: flex;
-  width: 900px;
+  width: 666px;
   padding: 0 1rem 2rem 1rem;
   color: black;
-  border-bottom: 0.1px solid black;
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 1rem;
+
+  h2 {
+    font-family: oranienbaum;
+  }
 
   img {
     width: 200px;
@@ -12,6 +16,12 @@
     margin-right: 2rem;
 
   }
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .top {
@@ -28,6 +38,7 @@
 
 p {
   margin: 0;
+  font-family: comfortaa;
 }
 
 a{
@@ -37,3 +48,5 @@ a{
 a:hover{
   text-decoration: none;
 }
+
+
