@@ -16,15 +16,17 @@
         <ul class="navbar-nav mr-auto">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "Home", root_path, class: "nav-link" %>
+              <%= link_to "home", root_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "A propos", pages_about_path, class: "nav-link" %>
+              <%= link_to "a propos", pages_about_path, class: "nav-link" %>
             </li>
             <li class="nav-item dropdown flex beige">
               <%= button_tag current_user.first_name, class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-right beige" aria-labelledby="navbarDropdown">
                 <%= link_to "Louer une robe", new_dress_path, class: "dropdown-item" %>
+                <%= link_to "Mes locations", bookings_path, class: "dropdown-item" %>
+                <%= link_to "Toutes mes robes", my_dresses_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
               </div>
             </li>
@@ -46,7 +48,8 @@
 <div class="banner">
 
   <div class="content">
-    <h1>Trouvez la robe de vos rêves</h1>
+    <h1>N'achetez plus le luxe, <br>
+    louez le.</h1>
 
     <div class="button-search">
       <%= form_tag(dresses_path, method: "get") do %>

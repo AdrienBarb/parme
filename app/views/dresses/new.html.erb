@@ -1,18 +1,15 @@
 <div class="cardnewdress">
-
-<div class="titrepassword">ADDING NEW DRESS</div>
-
-
-<%= simple_form_for(@dress) do |f| %>
-  <%= f.input :brand, label: false, placeholder: "Brand"%>
-  <%= f.input :color, label: false, placeholder: "Color" %>
-  <%= f.input :size, label: false, collection: ['S', 'XS', 'M', 'L'], default:1%>
-  <%= f.input :description, label: false, placeholder: "Description", as: :text %>
-  <%= f.input :price, label: false, placeholder: "Price"%>
-  <%= f.input :photo, label: false, placeholder: "Photo", as: :file %>
-  <div class="button1 center">
-  <%= f.button :submit%>
-<% end %>
-</div>
-
+  <div class="titrepassword center">AJOUTER UNE ROBE</div>
+    <%= simple_form_for(@dress) do |f| %>
+      <%= f.input :brand, label: false, placeholder: "Brand"%>
+      <%= f.input :color, label: false, placeholder: "Color" %>
+      <%= f.input :size, label: false, collection: ['S', 'XS', 'M', 'L'], default:1%>
+      <%= f.input :description, label: false, placeholder: "Description", as: :text %>
+      <%= f.input :price, label: false, placeholder: "Price"%>
+      <%= f.input :photo, label: false, placeholder: "Photo", as: :file %>
+      <div class="button1 center">
+        <%= f.button :submit%>
+      </div>
+    <% end %>
+  </div>
 </div>

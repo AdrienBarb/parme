@@ -5,6 +5,7 @@
   max-width: 400px;
   padding: 4rem;
   color: black;
+  font-family: oranienbaum;
 }
 
 .button1 {
@@ -56,10 +57,16 @@ text-decoration: none;
 
 .titrepassword {
   padding: 0em 0em 2em;
-  font-family: 'Brawler';
-  font-size: 35px;
+  font-family: oranienbaum;
+  font-size: 36px;
+  color: #4A020B;
 
 }
+
+.button1 > input {
+  color: white;
+}
+
 
 .cardnewdress {
   border: 1px solid #f4f4f4;
