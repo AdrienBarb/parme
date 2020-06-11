@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  after_action :verify_authorized, except: %i[index my_dresses], unless: :skip_pundit?
+  after_action :verify_policy_scoped, only: %i[index my_dresses], unless: :skip_pundit?
+
   private
 
   def skip_pundit?
