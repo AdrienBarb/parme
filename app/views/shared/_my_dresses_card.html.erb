@@ -1,0 +1,34 @@
+
+<%= link_to dress_path(dress) do  %>
+  <div class="card-container">
+    <div>
+      <% if dress.available == true %>
+        <button><%= link_to 'EN LIGNE', offline_dress_path(dress), method: :patch %></button>
+      <% else %>
+        <button><%= link_to 'METTRE EN LIGNE', online_dress_path(dress), method: :patch %></button>
+      <% end %>
+      <button><%= link_to 'RETIRER', dress_path(dress), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    </div>
+    <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="description">
+      <div class="top">
+        <div>
+          <h2><%= dress.brand %></h2>
+          <p><%= dress.description %></p>
+        </div>
+        <div>
+          <p>4,5★</p>
+        </div>
+      </div>
+      <div class="down">
+        <div>
+          <p><%= dress.color %></p>
+          <p><%= dress.size %></p>
+        </div>
+        <div>
+          <p><%= dress.price %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
