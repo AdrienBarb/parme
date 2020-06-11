@@ -10,26 +10,32 @@
 
   <div class="form-inputs">
     <%= f.input :email,
+                label: false,
+                placeholder: "Email",
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
+                label: false,
+                placeholder: "Password",
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: false,
+                placeholder: "Password confirmation",
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :first_name, required: true, autofocus: true, input_html: { autocomplete: "first_name" } %>
-    <%= f.input :last_name, required: true, autofocus: true, input_html: { autocomplete: "last_name" } %>
-    <%= f.input :address, required: true, autofocus: true, input_html: { autocomplete: "address" } %>
-    <%= f.input :zip_code, required: true, autofocus: true, input_html: { autocomplete: "zip_code" } %>
-    <%= f.input :city, required: true, autofocus: true, input_html: { autocomplete: "city" } %>
-    <%= f.input :phone_number, required: true, autofocus: true, input_html: { autocomplete: "phone_number" } %>
+    <%= f.input :first_name, label: false,  placeholder: "First name", required: true, autofocus: true, input_html: { autocomplete: "first_name" } %>
+    <%= f.input :last_name, label: false,  placeholder: "Last name", required: true, autofocus: true, input_html: { autocomplete: "last_name" } %>
+    <%= f.input :address, label: false,  placeholder: "Adress", required: true, autofocus: true, input_html: { autocomplete: "address" } %>
+    <%= f.input :zip_code, label: false,  placeholder: "Zip code", required: true, autofocus: true, input_html: { autocomplete: "zip_code" } %>
+    <%= f.input :city, label: false,  placeholder: "City", required: true, autofocus: true, input_html: { autocomplete: "city" } %>
+    <%= f.input :phone_number, label: false,  placeholder: "Phone number", required: true, autofocus: true, input_html: { autocomplete: "phone_number" } %>
   </div>
 
   <div class="form-actions button1 center">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "SIGN UP" %>
   </div>
 <% end %>
 <div class="center surcouche">

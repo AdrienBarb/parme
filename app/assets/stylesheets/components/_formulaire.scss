@@ -1,4 +1,5 @@
 .card {
+  border: 1px solid #f4f4f4;
   border-radius: 5px;
   margin: 20px auto;
   max-width: 400px;
@@ -7,10 +8,11 @@
 }
 
 .button1 {
-  font-family: 'Comfortaa';
+  font-family: 'Brawler';
   margin: 20px auto;
   background-color: #ecd4cc;
-  color: #ecd4cc;
+  text-decoration: uppercase !important;
+  color: #ffffff !important;
   border: 2px solid #ecd4cc;
   transition: 0.4s;
 
@@ -24,29 +26,48 @@
 }
 
 .surcouche {
- font-size: 10px;
- text-decoration-color: red;
+  font-family: 'Brawler';
+  font-size: 10px;
+  text-decoration: none;
+
+  a {color: black !important;}
 }
 
 h4 {
- font-family: 'Brawler';
-font-size: 40px;
+  padding: 1em;
+  font-family: 'Brawler';
+  font-size: 40px;
 }
 
 .titres_grand {
-font-family: 'Comfortaa';
-font-size: 40px;
+  font-family: 'Brawler';
+  font-size: 40px;
 }
 
 .titres_petit {
-font-family: 'Comfortaa';
-font-size: 15px;
+  font-family: 'Brawler';
+  font-size: 15px;
 }
 
+.textdecorationnone {
+text-decoration: none;
 
+}
 
+.titrepassword {
+  padding: 0em 0em 2em;
+  font-family: 'Brawler';
+  font-size: 35px;
 
+}
 
+.cardnewdress {
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 4rem;
+  color: black;
 
-
+}
 
