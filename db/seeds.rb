@@ -4,7 +4,7 @@ User.destroy_all
 
 puts "starting user creation"
 user1 = User.create(email:"ludivine@example.com", password:"azerty", first_name: "Ludivine", last_name: "Boucher", address: "50 rue des mougins", zip_code: "69000", city: "Lyon", phone_number: "06 45 34 32 34")
-user2 = User.create(email:"lea@example.com", password:"azerty", first_name: "Léa", last_name: "Simoni", address: "1 bis route des uluberlus", zip_code: "01300", city: "Ambléon", phone_number: "07 34 34 23 54")
+user2 = User.create(email:"lea@example.com", password:"azerty", first_name: "Léa", last_name: "Simoni", address: "1 bis route des uluberlus", zip_code: "38000", city: "Grenoble", phone_number: "07 34 34 23 54")
 user3 = User.create(email:"nerina@example.com", password:"azerty", first_name: "Nérina", last_name: "Phélut", address: "56 boulevard des roses", zip_code: "75013", city: "Paris", phone_number: "06 09 12 34 44")
 puts "ending user creation"
 
