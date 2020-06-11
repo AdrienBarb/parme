@@ -3,18 +3,30 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 3rem;
     color: white;
     font-size: 22px;
     font-family: 'Oranienbaum', serif;
+    height: 75px;
 
       button {
-        color: white !important;
+        color: #4A020B !important;
       }
 }
 
+.title > a {
+  font-size: 30px;
+}
+
 a {
-  color: white !important;
+    color: #4A020B !important;
+}
+
+ul > li {
+  margin: 1rem;
+}
+
+ul {
+  margin-right: 2rem;
 }
 
 .navbar-lewagon {
@@ -36,7 +48,9 @@ a {
   margin: 0;
 }
 
-
+.link-right > li > a{
+  font-size: 6px;
+}
 
 .flex {
   display: flex;
