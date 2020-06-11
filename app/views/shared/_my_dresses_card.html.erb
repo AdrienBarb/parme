@@ -7,26 +7,26 @@
       <% else %>
         <button><%= link_to 'METTRE EN LIGNE', online_dress_path(dress), method: :patch %></button>
       <% end %>
-      <button><%= link_to 'RETIRER', dress_path(dress), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <button><%= link_to 'RETIRER', dress_path(dress), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cette robe ?' } %></button>
     </div>
     <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="description">
       <div class="top">
         <div>
-          <h2><%= dress.brand %></h2>
-          <p><%= dress.description %></p>
+          <h2>Robe <%= dress.brand %></h2>
+          <p>Description : <%= dress.description %></p>
         </div>
         <div>
-          <p>4,5★</p>
+          <p>★★★★</p>
         </div>
       </div>
       <div class="down">
         <div>
-          <p><%= dress.color %></p>
-          <p><%= dress.size %></p>
+          <p>Couleur : <%= dress.color %></p>
+          <p>Taille : <%= dress.size %></p>
         </div>
         <div>
-          <p><%= dress.price %></p>
+          <p><%= dress.price %>€ / jour</p>
         </div>
       </div>
     </div>
