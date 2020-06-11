@@ -1,0 +1,47 @@
+.booking-container {
+  max-width: 650px;
+  margin: 3rem auto;
+
+  h1 {
+    font-family: 'Oranienbaum', serif;
+    color: #4A020B;
+  }
+
+  img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+
+
+
+.card-container{
+  padding: 1rem;
+  display: flex;
+}
+
+.info-booking{
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.info-booking-title {
+  margin-right: 2rem;
+}
+
+.booking-title{
+  margin-bottom: 1rem;
+}
+
+.booking-bottom > button {
+  padding: 0.5rem 2rem;
+  background-color: #ecd4cc;
+  border: none;
+  margin-top: 1rem;
+
+  a {
+      color: white !important;
+  }
+}
