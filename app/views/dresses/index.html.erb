@@ -1,7 +1,11 @@
-<h1>Les robes disponibles à <%= @dresses.first.user.city %></h1>
+<div class="container-dresses">
 
-<%= render "shared/filters_form" %>
+  <h1>Les robes disponibles à <%= @dresses.first.user.city %></h1>
 
-<% @dresses.each do |dress| %>
-  <%= render partial: "shared/dresses_card", locals: {dress: dress} %>
-<% end %>
+  <%= render "shared/filters_form" %>
+
+  <% @dresses.each do |dress| %>
+    <%= render partial: "shared/dresses_card", locals: {dress: dress} %>
+  <% end %>
+
+</div>

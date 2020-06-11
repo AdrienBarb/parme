@@ -1,0 +1,20 @@
+.form-filter-container{
+  margin: 3rem 0;
+  display: flex;
+
+  button{
+    background-color: #ecd4cc;
+    border: none;
+    padding: 1rem;
+  }
+}
+
+.button-filter{
+  background-color: white;
+  padding: 8px;
+  border: 0.3px solid black;
+  max-width: 280px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
