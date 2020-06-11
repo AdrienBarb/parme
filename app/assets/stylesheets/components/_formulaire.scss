@@ -6,21 +6,47 @@
   color: black;
 }
 
-
 .button1 {
+  font-family: 'Comfortaa';
   margin: 20px auto;
   background-color: #ecd4cc;
   color: #ecd4cc;
   border: 2px solid #ecd4cc;
+  transition: 0.4s;
+
 }
+
+.button1:hover {opacity: 0.6}
 
 
 .center {
   text-align: center
 }
 
-
 .surcouche {
  font-size: 10px;
  text-decoration-color: red;
 }
+
+h4 {
+ font-family: 'Brawler';
+font-size: 40px;
+}
+
+.titres_grand {
+font-family: 'Comfortaa';
+font-size: 40px;
+}
+
+.titres_petit {
+font-family: 'Comfortaa';
+font-size: 15px;
+}
+
+
+
+
+
+
+
+
