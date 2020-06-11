@@ -4,8 +4,17 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 3rem;
-    color: black;
+    color: white;
+    font-size: 22px;
     font-family: 'Oranienbaum', serif;
+
+      button {
+        color: white !important;
+      }
+}
+
+a {
+  color: white !important;
 }
 
 .navbar-lewagon {
@@ -27,9 +36,7 @@
   margin: 0;
 }
 
-a{
-  color: black;
-}
+
 
 .flex {
   display: flex;

@@ -1,3 +1,41 @@
+<% content_for(:hide_navbar) {'true'} %>
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon transparent">
+  <%= link_to 'PARME', root_path %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "A propos", pages_about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown flex beige">
+          <%= button_tag current_user.first_name, class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right beige" aria-labelledby="navbarDropdown">
+            <%= link_to "Louer une robe", new_dress_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: :delete %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "A propos", pages_about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
 <div class="banner">
 
   <div class="content">
@@ -6,6 +44,9 @@
     <%= form_tag(dresses_path, method: "get") do %>
       <%= text_field_tag(:city) %>
       <%= submit_tag() %>
+      <button>
+        toutou
+      </button>
     <% end %>
   </div>
 
