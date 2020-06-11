@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+
+.transparent {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    a {
+      color: #DB9D6A !important;
+    }
+
+    button {
+        color: #DB9D6A !important;
+    }
+}
+
+

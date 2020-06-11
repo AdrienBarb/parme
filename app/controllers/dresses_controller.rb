@@ -1,8 +1,9 @@
 class DressesController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index]
+  before_action :set_dress, only: %i[show online offline destroy]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    dresses = Dress.joins(:user).where(users: { city: params[:city].capitalize })
+    dresses = policy_scope(Dress).joins(:user).where(users: { city: params[:city].capitalize })
     dresses = dresses.where(brand: params[:brand].capitalize) if params[:brand].present?
     dresses = dresses.where(color: params[:color].capitalize) if params[:color].present?
     dresses = dresses.where(size: params[:size].capitalize) if params[:size].present?
@@ -11,8 +12,6 @@ skip_before_action :authenticate_user!, only: [:index]
   end
 
   def show
-    @dress = Dress.find(params[:id])
-    authorize @dress
   end
 
   def new
@@ -25,21 +24,40 @@ skip_before_action :authenticate_user!, only: [:index]
     authorize @dress
     @dress.user = current_user
 
-    if @dress.save!
+    if @dress.save
       redirect_to dress_path(@dress)
     else
       render :new
     end
   end
 
+  def online
+    @dress.update!(available: true)
+
+    redirect_to my_dresses_path
+  end
+
+  def offline
+    @dress.update!(available: false)
+
+    redirect_to my_dresses_path
+  end
+
   def destroy
-    @dress = Dress.find(params[:id])
-    authorize @dress
     @dress.destroy
-    redirect_to root_path
+    redirect_to my_dresses_path
+  end
+
+  def my_dresses
+    @dresses = policy_scope(Dress).where(user: current_user).order(:brand)
   end
 
   private
+
+  def set_dress
+    @dress = Dress.find(params[:id])
+    authorize @dress
+  end
 
   def dress_params
     params.require(:dress).permit(:brand, :color, :size, :description, :price, :photo)

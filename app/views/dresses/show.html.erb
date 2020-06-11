@@ -1,5 +1,6 @@
 
 
+
 <% if policy(@dress).destroy? %>
   <%= link_to 'SUPPRIMER', dress_path(@dress), method: :delete, data: { confirm: 'Are you sure to delete this dress' } %>
 <% end %>

@@ -13,9 +13,19 @@ class DressPolicy < ApplicationPolicy
     true
   end
 
-  def destroy?
-    record.user == user
+  def online?
+    belong_to_user?
   end
+
+  def offline?
+    belong_to_user?
+  end
+
+  def destroy?
+    belong_to_user?
+  end
+
+private
 
   def belong_to_user?
     record.user == user
