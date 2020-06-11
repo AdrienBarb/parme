@@ -1,12 +1,18 @@
-<h1>ADDING NEW DRESS</h1>
-coucou
+<div class="cardnewdress">
+
+<div class="titrepassword">ADDING NEW DRESS</div>
+
 
 <%= simple_form_for(@dress) do |f| %>
-  <%= f.input :brand %>
-  <%= f.input :color %>
-  <%= f.input :size, collection: ['XS', 'S', 'M', 'L'] %>
-  <%= f.input :description, as: :text %>
-  <%= f.input :price %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :brand, label: false, placeholder: "Brand"%>
+  <%= f.input :color, label: false, placeholder: "Color" %>
+  <%= f.input :size, label: false, collection: ['S', 'XS', 'M', 'L'], default:1%>
+  <%= f.input :description, label: false, placeholder: "Description", as: :text %>
+  <%= f.input :price, label: false, placeholder: "Price"%>
+  <%= f.input :photo, label: false, placeholder: "Photo", as: :file %>
+  <div class="button1 center">
   <%= f.button :submit%>
 <% end %>
+</div>
+
+</div>
