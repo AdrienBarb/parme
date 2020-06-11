@@ -37,7 +37,13 @@
   </div>
 </div>
 
-<% @dress.reviews.each do |review| %>
-  <%= render partial: "shared/review_card", locals: {review: review} %>
-<% end %>
+
+  <% @dress.reviews.each do |review| %>
+    <div class="reviews-container">
+      <%= render partial: "shared/review_card", locals: {review: review} %>
+    </div>
+  <% end %>
+
+
+
 
