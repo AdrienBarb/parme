@@ -51,13 +51,11 @@
     <h1>N'achetez plus le luxe, <br>
     louez le.</h1>
 
-    <div class="button-search">
+
       <%= form_tag(dresses_path, method: "get") do %>
-      <%= text_field_tag(:city) %>
-      <button>
-        <i class="fas fa-search"></i>
-      </button>
-    </div>
+      <%= text_field_tag :city, "", class: "search-bar", placeholder: "Votre ville" %>
+      <button class="loupe"><i class="fas fa-search"></i></button>
+
 
     <% end %>
   </div>
