@@ -1,0 +1,5 @@
+<h1>Vos <%= @dresses.length %> robes </h1>
+
+<% @dresses.each do |dress| %>
+  <%= render partial: "shared/my_dresses_card", locals: {dress: dress} %>
+<% end %>
