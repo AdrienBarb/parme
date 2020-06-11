@@ -6,7 +6,6 @@ class BookingPolicy < ApplicationPolicy
 
     def create?
       true
-      # record.user != user
     end
   end
 end
