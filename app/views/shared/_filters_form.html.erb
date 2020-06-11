@@ -1,9 +1,9 @@
 
 <div class="form-filter-container">
   <%= form_tag(dresses_path, method: "get") do %>
-  <%= text_field_tag(:brand, nil, placeholder: 'choose a brand', class: 'button-filter') %>
-  <%= text_field_tag(:color, nil, placeholder: 'choose a color', class: 'button-filter') %>
-  <%= text_field_tag(:size, nil, placeholder: 'choose a size', class: 'button-filter') %>
+  <%= text_field_tag(:brand, nil, placeholder: 'sélectioner une marque', class: 'button-filter') %>
+  <%= text_field_tag(:color, nil, placeholder: 'sélectioner une couleur', class: 'button-filter') %>
+  <%= text_field_tag(:size, nil, placeholder: 'sélectioner une taille', class: 'button-filter') %>
   <%= hidden_field_tag(:city, "#{params[:city]}") %>
   <button class="button-filter"> FILTRER </button>
   <% end %>

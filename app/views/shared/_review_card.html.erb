@@ -1,7 +1,7 @@
 
 <div>
   <h3><%= review.dress.user.first_name.capitalize %> <%= review.dress.user.last_name.capitalize %></h3>
-  <p> <%= review.created_at %></p>
+  <p> <%= review.created_at.strftime('%d/%m/%Y') %></p>
   <% review.rating.floor.times do %>
     ★
   <% end %>
