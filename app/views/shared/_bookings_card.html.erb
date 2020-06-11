@@ -4,13 +4,28 @@
   <div class="card-container">
     <%= cl_image_tag booking.dress.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="description">
-      <h2>Robe <%= booking.dress.brand %></h2>
-      <p>Réservée du <%= booking.start_rent_at %> au <%= booking.end_rent_at %></p>
-      <p>Taille : <%= booking.dress.size %></p>
-      <p>Couleur : <%= booking.dress.color %></p>
-      <p>Prix : <%= booking.dress.price %>€ / jour</p>
-      <button><%= link_to 'COMMENTER', new_dress_review_path(booking.dress) %></button>
+      <div class="booking-title">
+        <h2>Robe <%= booking.dress.brand %></h2>
+      </div>
+      <div class="info-booking">
+        <div class="info-booking-title">
+          <p>Taille : </p>
+          <p>Couleur : </p>
+          <p>Prix : </p>
+        </div>
+        <div class="info-booking-info">
+          <p><%= booking.dress.size %></p>
+          <p><%= booking.dress.color %></p>
+          <p><%= booking.dress.price %>€ / jour</p>
+        </div>
+      </div>
+      <div class="booking-bottom">
+        <p>Réservée du <%= booking.start_rent_at %> au <%= booking.end_rent_at %></p>
+        <button><%= link_to 'COMMENTER', new_dress_review_path(booking.dress) %></button>
+      </div>
     </div>
   </div>
 <% end %>
+
+
 
