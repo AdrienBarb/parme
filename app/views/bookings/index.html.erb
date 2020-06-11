@@ -1,0 +1,5 @@
+<h1>Mes réservations à venir</h1>
+
+<% @bookings.each do |booking| %>
+  <%= render partial: "shared/bookings_card", locals: {booking: booking} %>
+<% end %>

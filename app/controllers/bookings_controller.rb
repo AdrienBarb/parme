@@ -1,4 +1,8 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = policy_scope(Booking).where(user: current_user)
+  end
+
   def new
     @dress = Dress.find(params[:dress_id])
     @booking = Booking.new

@@ -1,4 +1,5 @@
 
+
 <div class="show-container">
   <%= cl_image_tag @dress.photo.key, height: 300, width: 400, crop: :fill %>
   <div>
@@ -22,57 +23,21 @@
     </div>
     <div class="dress-button-container">
 
-        <% if policy(@dress).destroy? %>
+      <% if policy(@dress).destroy? %>
+      <div class="button-dress">
+        <%= link_to 'SUPPRIMER', dress_path(@dress), method: :delete, data: { confirm: 'Are you sure to delete this dress' } %>
+      </div>
+      <% end %>
+      <% if !policy(@dress).belong_to_user? %>
         <div class="button-dress">
-          <%= link_to 'SUPPRIMER', dress_path(@dress), method: :delete, data: { confirm: 'Are you sure to delete this dress' } %>
+          <p><%= link_to 'Booker cette robe', new_dress_booking_path(@dress) %></p>
         </div>
-        <% end %>
-        <% if !policy(@dress).belong_to_user? %>
-          <div class="button-dress">
-            <p><%= link_to 'Booker cette robe', new_dress_booking_path(@dress) %></p>
-          </div>
-        <% end %>
-
+      <% end %>
     </div>
-
   </div>
 </div>
 
-
-
-
-      <% if !policy(@dress).belong_to_user? %>
-        <p><%= link_to 'Laisser une review', new_dress_review_path(@dress) %></p>
-      <% end %>
-
-
-<div class="review-container">
-  <h1>Avis:</h1>
-  <% @dress.reviews.each do |f| %>
-    <ul>
-      <li>
-        <div class="review">
-          <p>
-            Notes: <%= f.rating %>
-          </p>
-          <p>
-            Commentaire: " <%= f.description %> "
-          </p>
-        </div>
-      </li>
-    </ul>
-  <% end %>
-</div>
-
-
-
-
-
-
-
-
-<!-- <form action="">
-  <input type="text" name="date" class="flatpickr">
-</form>
- -->
+<% @dress.reviews.each do |review| %>
+  <%= render partial: "shared/review_card", locals: {review: review} %>
+<% end %>
 
