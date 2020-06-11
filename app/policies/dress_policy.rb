@@ -25,8 +25,6 @@ class DressPolicy < ApplicationPolicy
     belong_to_user?
   end
 
-private
-
   def belong_to_user?
     record.user == user
   end
