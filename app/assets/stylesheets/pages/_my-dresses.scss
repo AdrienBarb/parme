@@ -7,18 +7,20 @@
     color: #4A020B;
     margin-bottom: 2rem;
   }
+
+  .my-dresses-button{
+    padding: 0.5rem 1rem;
+    background-color: #ecd4cc;
+    border: none;
+    margin-bottom: 1rem;
+    width: 200px;
+    color: white;
+    font-family: 'confortaa';
+  }
 }
 
 .card-container{
   width: 940px;
-}
-
-.my-dresses-button{
-  padding: 0.5rem 1rem;
-  background-color: #ecd4cc;
-  border: none;
-  margin-bottom: 1rem;
-  width: 200px;
 }
 
 .my-dresses-flex{
@@ -27,9 +29,6 @@
   justify-content: space-arround;
 }
 
-.card-container > .my-dresses-button > button > a {
-    color: white !important;
-}
 
 
 

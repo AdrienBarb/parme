@@ -1,12 +1,11 @@
 // Boutons generaux
 
 .buttonG {
-  font-family: 'Oranienbaum';
-  padding: 0em -1em 1em;
+  font-family: 'confortaa', sans-serif;
+  padding: 8px 40px;
   background-color: #ecd4cc;
-  color: #ffffff !important;
-  border: 2px solid #ecd4cc;
-  transition: 0.4s;
+  transition: 0.3s;
+  color: #fff !important;
 
   &:hover {
   opacity: 0.6;

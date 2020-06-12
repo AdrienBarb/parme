@@ -3,25 +3,28 @@
 // --------------------------------------
 
 .titre_formulaire {
-font-family: 'Oranienbaum';
-  font-size: 40px;
+  font-family: comfortaa;
+  font-size: 30px;
   padding: 0em 0em 1em;
+
+  input {
+    font-family: comfortaa;
+  }
+
 }
 
 .titrepassword {
   padding: 0em 0em 1em;
-  font-family: oranienbaum;
-  font-size: 36px;
+  font-family: comfortaa;
+  font-size: 30px;
   color: #4A020B;
 
 }
 .liensbasformulaire {
-  font-family: 'Brawler';
+  font-family: comfortaa;
   font-size: 10px;
   text-decoration: none;
   margin: 1em;
-
-  a {color: black !important;}
 }
 
 
@@ -40,20 +43,6 @@ font-family: 'Oranienbaum';
   font-family: oranienbaum;
 }
 
-.button1 {
-  font-family: 'Comfortaa', sans-serif;
-  margin: 20px auto;
-  background-color: #ecd4cc;
-  color: #ffffff;
-  border: 2px solid #ecd4cc;
-  transition: 0.4s;
-  width: 100%
-
-}
-
-
-
-.button1:hover {opacity: 0.6}
 
 
 .center {
@@ -64,8 +53,6 @@ font-family: 'Oranienbaum';
   font-family: 'Brawler';
   font-size: 10px;
   text-decoration: none;
-
-  a {color: black !important;}
 }
 
 h4 {
