@@ -7,7 +7,7 @@ class DressesController < ApplicationController
     dresses = dresses.where(brand: params[:brand].capitalize) if params[:brand].present?
     dresses = dresses.where(color: params[:color].capitalize) if params[:color].present?
     dresses = dresses.where(size: params[:size].capitalize) if params[:size].present?
-    dresses = dresses.where(price: params[:price].to_i) if params[:price].present?
+    dresses = dresses.where("#{:price} < ?", params[:price]) if params[:price].present?
 
     @dresses = dresses.select{ |dress| dress.available }
   end
