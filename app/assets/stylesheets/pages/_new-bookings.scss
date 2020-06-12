@@ -1,0 +1,41 @@
+.card-bookings {
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 2rem;
+  color: black;
+  font-family: brawler;
+
+  label {
+    font-size: 14px;
+  }
+
+  h1{
+    font-family: brawler;
+    font-size: 36px;
+    color: #4A020B;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
+.button-bookings {
+  font-family: 'Comfortaa', sans-serif;
+  margin: 20px auto;
+  background-color: #ecd4cc;
+  color: #ffffff;
+  transition: 0.4s;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+
+.button-bookings:hover{
+  opacity: 0.6;
+  background-color: #ecd4cc;
+  border: none;
+  border-radius: 0;
+}
