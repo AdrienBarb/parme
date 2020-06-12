@@ -1,5 +1,9 @@
-<%= simple_form_for [@dress, @review] do |f| %>
-  <%= f.input :rating, collection: 1..5 %>
-  <%= f.input :description %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+
+<div class="cardnewdress">
+  <h1 style="color: #4A020B; text-align: center; margin-bottom: 35px;">Laisser un avis</h1>
+  <%= simple_form_for [@dress, @review] do |f| %>
+    <%= f.input :rating, collection: 1..5, label: "Note" %>
+    <%= f.input :description, label: "Votre avis" %>
+    <%= f.submit "Submit review", class: "buttonG" %>
+  <% end %>
+</div>
