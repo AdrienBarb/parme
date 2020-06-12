@@ -41,19 +41,17 @@ font-family: 'Oranienbaum';
 }
 
 .button1 {
-  font-family: 'Brawler';
+  font-family: 'Comfortaa', sans-serif;
   margin: 20px auto;
   background-color: #ecd4cc;
-  text-decoration: uppercase !important;
-  color: #ffffff !important;
+  color: #ffffff;
   border: 2px solid #ecd4cc;
   transition: 0.4s;
+  width: 100%
 
 }
 
-.button1 > input {
-  color: white;
-}
+
 
 .button1:hover {opacity: 0.6}
 
