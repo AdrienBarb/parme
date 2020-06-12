@@ -1,0 +1,24 @@
+// Boutons generaux
+
+.buttonG {
+  font-family: 'Oranienbaum';
+  padding: 0em -1em 1em;
+  background-color: #ecd4cc;
+  color: #ffffff !important;
+  border: 2px solid #ecd4cc;
+  transition: 0.4s;
+
+  &:hover {
+  opacity: 0.6;
+  }
+}
+
+.buttonG > input {
+  color: white;
+}
+
+
+
+
+// ---------------------------------------
+

@@ -1,7 +1,7 @@
 
 <div class="card">
 
-<div class="center titres_grand">Log in</div>
+<div class="center titre_formulaire">Log in</div>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs titres_petit">
@@ -19,12 +19,12 @@
       <div class="textdecorationnone"><%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %></div>
     </div>
 
-    <div class="button1 center">
+    <div class="buttonG center">
       <%= f.button :submit, "VALIDEZ" %>
       <% end %>
     </div>
 
-<div class="center surcouche">
+<div class="center liensbasformulaire">
 <%= render "devise/shared/links" %>
 </div>
 
