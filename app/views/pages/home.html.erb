@@ -18,9 +18,6 @@
             <li class="nav-item">
               <%= link_to "home", root_path, class: "nav-link" %>
             </li>
-            <li class="nav-item">
-              <%= link_to "team", pages_about_path, class: "nav-link" %>
-            </li>
             <li class="nav-item dropdown flex beige">
               <%= button_tag current_user.first_name, class: "dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-right beige" aria-labelledby="navbarDropdown">
@@ -31,9 +28,6 @@
               </div>
             </li>
           <% else %>
-            <li class="nav-item">
-              <%= link_to "team", pages_about_path, class: "nav-link" %>
-            </li>
             <li class="nav-item">
               <%= link_to "Me connecter", new_user_session_path, class: "nav-link" %>
             </li>

@@ -24,7 +24,7 @@
     <div class="dress-button-container">
 
       <% if policy(@dress).destroy? %>
-      <div class="button-dress">
+      <div class="buttonG">
         <%= link_to 'SUPPRIMER', dress_path(@dress), method: :delete, data: { confirm: 'Are you sure to delete this dress' } %>
       </div>
       <% end %>
