@@ -1,6 +1,7 @@
 <div class="card">
 
-<h4 class="center">M'ENREGISTRER</h4>
+
+<h4 class="titre_formulaire center">M'ENREGISTRER</h4>
 
 
 
@@ -34,11 +35,11 @@
     <%= f.input :phone_number, label: false,  placeholder: "Phone number", required: true, autofocus: true, input_html: { autocomplete: "phone_number" } %>
   </div>
 
-  <div class="form-actions button1 center">
+  <div class="form-actions buttonG center">
     <%= f.button :submit, "SIGN UP" %>
   </div>
 <% end %>
-<div class="center surcouche">
+<div class="center liensbasformulaire">
 <%= render "devise/shared/links" %>
 </div>
 </div>

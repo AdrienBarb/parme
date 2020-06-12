@@ -1,3 +1,35 @@
+// --------------------------------------
+// nouvelles class (actives)
+// --------------------------------------
+
+.titre_formulaire {
+font-family: 'Oranienbaum';
+  font-size: 40px;
+  padding: 0em 0em 1em;
+}
+
+.titrepassword {
+  padding: 0em 0em 1em;
+  font-family: oranienbaum;
+  font-size: 36px;
+  color: #4A020B;
+
+}
+.liensbasformulaire {
+  font-family: 'Brawler';
+  font-size: 10px;
+  text-decoration: none;
+  margin: 1em;
+
+  a {color: black !important;}
+}
+
+
+
+// -------------------------------------
+
+
+
 .card {
   border: 1px solid #f4f4f4;
   border-radius: 5px;
@@ -43,8 +75,9 @@ h4 {
 }
 
 .titres_grand {
-  font-family: 'Brawler';
+  font-family: 'Oranienbaum';
   font-size: 40px;
+  padding: 1em;
 }
 
 .titres_petit {
@@ -57,13 +90,6 @@ text-decoration: none;
 
 }
 
-.titrepassword {
-  padding: 0em 0em 2em;
-  font-family: oranienbaum;
-  font-size: 36px;
-  color: #4A020B;
-
-}
 
 
 
@@ -76,4 +102,6 @@ text-decoration: none;
   color: black;
 
 }
+
+
 
