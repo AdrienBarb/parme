@@ -6,25 +6,25 @@ class BookingsController < ApplicationController
   def new
     @dress = Dress.find(params[:dress_id])
     @booking = Booking.new
+    authorize @dress
   end
 
   def create
     @dress = Dress.find(params[:dress_id])
     @booking = Booking.new(booking_params)
+    authorize @dress
     @booking.dress = @dress
     @booking.user = current_user
-    if @booking.save!
+    if @booking.save
       redirect_to dress_path(@dress)
     else
       render :new
     end
   end
 
-private
+  private
 
   def booking_params
     params.require(:booking).permit(:start_rent_at, :end_rent_at)
   end
-
-
 end

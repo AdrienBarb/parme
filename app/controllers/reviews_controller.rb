@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     authorize @review
     @review.dress = @dress
     @review.user = current_user
-    if @review.save!
+    if @review.save
       redirect_to dress_path(@dress)
     else
       render :new
