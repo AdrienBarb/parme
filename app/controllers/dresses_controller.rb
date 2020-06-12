@@ -9,7 +9,6 @@ class DressesController < ApplicationController
     dresses = dresses.where(size: params[:size].capitalize) if params[:size].present?
     dresses = dresses.where("#{:price} < ?", params[:price]) if params[:price].present?
 
-
     @dresses = dresses.select{ |dress| dress.available }
   end
 

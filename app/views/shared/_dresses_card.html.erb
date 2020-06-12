@@ -1,5 +1,5 @@
 
-<%= link_to dress_path(dress) do  %>
+<%= link_to dress_path(dress), target: :_blank do  %>
   <div class="card-container">
     <%= cl_image_tag dress.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="description">

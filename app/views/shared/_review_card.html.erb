@@ -1,7 +1,7 @@
 
 <div class="card-review">
   <div class="name-stars">
-      <h3><%= review.dress.user.first_name.capitalize %> <%= review.dress.user.last_name.capitalize %></h3>
+      <h3><%= review.user.first_name.capitalize %> <%= review.user.last_name.capitalize %></h3>
       <% review.rating.floor.times do %>
         ★
       <% end %>
@@ -10,6 +10,6 @@
       <p> <%= review.created_at.strftime('%d/%m/%Y') %></p>
   </div>
   <div class="review-description">
-    <p> "<%= review.description %>"</p>
+    <p><%= review.description %></p>
   </div>
 </div>
