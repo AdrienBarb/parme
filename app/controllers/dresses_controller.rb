@@ -26,7 +26,7 @@ class DressesController < ApplicationController
     @dress.user = current_user
 
     if @dress.save
-      redirect_to dress_path(@dress)
+      redirect_to my_dresses_path
     else
       render :new
     end
